@@ -289,23 +289,23 @@ Bringing these views together makes it easier to identify where the business is 
 
 ### Finance View
 
-![Finance View](images/finance-view.png)
+![Finance View](finance-view.png)
 
 ### Sales View
 
-![Sales View](images/sales-view.png)
+![Sales View](sales-view.png)
 
 ### Marketing View
 
-![Marketing View](images/marketing-view.png)
+![Marketing View](marketing-view.png)
 
 ### Supply Chain View
 
-![Supply Chain View](images/supply-chain-view.png)
+![Supply Chain View](supply-chain-view.png)
 
 ### Executive View
 
-![Executive View](images/executive-view.png)
+![Executive View](executive-view.png)
 
 ## Live Dashboard
 
