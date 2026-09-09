@@ -1,14 +1,8 @@
-# Business-Insight-360
+# Business Insight 360
 
 ## Overview
 
-Business Insight 360 is a Power BI project built for **AtliQ Hardware** to bring finance, sales, marketing, supply chain and executive reporting into one interactive solution.
-
-The project uses more than **1.8 million records** from **MySQL and Excel** and focuses on helping different teams understand performance from multiple business angles.
-
-I used **Power Query** for data preparation and transformation, built the reporting model in Power BI, created measures with **DAX**, and used **DAX Studio** to improve performance.
-
-The final report includes separate views for:
+Business Insight 360 is a Power BI project built for **AtliQ Hardware** to provide a single view of business performance across:
 
 - Finance
 - Sales
@@ -16,14 +10,22 @@ The final report includes separate views for:
 - Supply Chain
 - Executive Management
 
-## Data Source and Scope
+The project uses more than **1.8 million records** from **MySQL and Excel**.
 
-The project combines business data from:
+I used **Power Query** for data preparation, **DAX** for calculations, and **DAX Studio** to improve model performance.
+
+The goal was to create one interactive reporting solution that helps users understand not just sales, but also profitability, forecasting, customer performance, product performance and inventory risk.
+
+---
+
+## Data Sources
+
+The project combines data from:
 
 - **MySQL**
 - **Excel**
 
-The data covers areas such as:
+The datasets cover areas such as:
 
 - Sales
 - Customers
@@ -34,12 +36,26 @@ The data covers areas such as:
 - Net profit
 - Forecast accuracy
 - Inventory risk
-- Revenue contribution
 - Market share
+- Revenue contribution
 - Profit and loss
-- Supply chain performance
 
-The report allows users to filter performance by:
+---
+
+## Data Preparation and Modelling
+
+The data preparation process included:
+
+- Connecting Power BI to MySQL and Excel sources
+- Cleaning and transforming data using **Power Query**
+- Standardising fields across datasets
+- Creating relationships between fact and dimension tables
+- Building the data model in Power BI
+- Creating business measures using **DAX**
+- Using **DAX Studio** to review and improve performance
+- Adding filters, slicers and report navigation
+
+The final report can be filtered by:
 
 - Region
 - Market
@@ -54,124 +70,99 @@ The report allows users to filter performance by:
 - Last Year
 - Target
 
-## Data Preparation and Modelling
+---
 
-The data preparation process involved:
+# Dashboard Views
 
-- Connecting Power BI to MySQL and Excel sources.
-- Cleaning and transforming raw data using **Power Query**.
-- Standardising fields across datasets.
-- Creating relationships between fact and dimension tables.
-- Building a structured data model for analysis.
-- Creating calculated measures using **DAX**.
-- Using **DAX Studio** to review and improve model performance.
-- Preparing interactive filters and navigation across the report pages.
-
-The goal was to create one reporting solution that could support different departments without requiring separate dashboards for each business function.
-
-## Finance View
+## 1. Finance View
 
 The Finance View focuses on overall financial performance and Profit & Loss reporting.
 
-The dashboard includes:
+### Key KPIs
 
-- Net Sales
-- Gross Margin %
-- Net Profit %
+- **Net Sales:** $823.85M
+- **Gross Margin:** 36.5%
+- **Net Profit:** -6.6%
+
+### Analysis Included
+
 - Profit and Loss Statement
 - Net Sales Performance Over Time
-- Regional P&L Performance
-- Segment Performance
-
-Key figures shown in the report include:
-
-- **Net Sales: $823.85M**
-- **Gross Margin: 36.5%**
-- **Net Profit: -6.6%**
-
-The Profit and Loss statement also shows:
-
-- Gross Sales
-- Pre-Invoice Deductions
-- Post-Invoice Deductions
-- Net Sales
-- Manufacturing Cost
-- Freight Cost
-- Other Cost
-- Total COGS
 - Gross Margin
-- Operational Expense
 - Net Profit
+- Regional P&L performance
+- Segment performance
+- Comparison against benchmarks and previous periods
 
-This page makes it easier to compare current performance against benchmark, last year and target values.
+The report makes it easier to understand how revenue, cost and profitability are connected.
 
-## Sales View
+![Finance View](finance-view.png)
 
-The Sales View looks at performance by customers, products and markets.
+---
 
-The report includes:
+## 2. Sales View
+
+The Sales View focuses on customer, product and market performance.
+
+### Key Metrics
+
+- **Net Sales:** $823.8M
+- **Gross Margin:** $300.6M
+- **Gross Margin %:** 36.5%
+
+### Analysis Included
 
 - Customer Performance
 - Product Performance
 - Regional Performance
 - Gross Margin analysis
-- Net Sales analysis
-- Unit Economics
 - Performance Matrix
+- Unit Economics
 
-The dashboard shows total:
+The report allows users to compare customers and products based on sales and margin rather than looking at revenue alone.
 
-- **Net Sales: $823.8M**
-- **Gross Margin: $300.6M**
-- **Gross Margin %: 36.5%**
+![Sales View](sales-view.png)
 
-The customer table allows users to compare individual customers by:
+---
 
-- Net Sales
-- Gross Margin
-- Gross Margin %
+## 3. Marketing View
 
-The product table also compares segments such as:
+The Marketing View looks at profitability across products, customers and markets.
 
-- Notebook
-- Accessories
-- Peripherals
-- Storage
-- Desktop
-- Networking
+### Key KPIs
 
-The Performance Matrix helps show the relationship between **Net Sales** and **Gross Margin %** across markets.
+- **Net Sales:** $823.8M
+- **Gross Margin:** $300.6M
+- **Net Profit:** -$54.7M
+- **Net Profit %:** -6.6%
 
-## Marketing View
-
-The Marketing View focuses on product, market and customer profitability.
-
-It includes:
+### Analysis Included
 
 - Product Performance
 - Region / Market / Customer Performance
 - Performance Matrix
-- Unit Economics
 - Net Profit analysis
+- Unit Economics
 
-The dashboard shows that:
+One of the main insights from this view is that strong sales do not always translate into strong profitability.
 
-- Total Net Sales were approximately **$823.8M**.
-- Total Gross Margin was approximately **$300.6M**.
-- Total Net Profit was approximately **-$54.7M**.
-- Overall Net Profit % was approximately **-6.6%**.
+Some products and markets generated high revenue but still recorded negative net profit margins.
 
-The report makes it easier to see which products and markets are generating strong sales but weaker profitability.
+![Marketing View](marketing-view.png)
 
-For example, some product segments showed strong revenue while still recording negative net profit margins.
+---
 
-This helps distinguish between products that sell well and products that actually contribute to profit.
+## 4. Supply Chain View
 
-## Supply Chain View
+The Supply Chain View focuses on forecast accuracy, inventory risk and demand planning.
 
-The Supply Chain View focuses on forecast accuracy, inventory risk and error trends.
+### Key KPIs
 
-The dashboard includes:
+- **Forecast Accuracy:** 80.2%
+- **Net Error:** -751.7K
+- **Absolute Error:** 9780.7K
+
+### Analysis Included
 
 - Forecast Accuracy
 - Net Error
@@ -181,39 +172,30 @@ The dashboard includes:
 - Forecast Accuracy Trend
 - Net Error Trend
 
-The key figures shown include:
+The report also classifies supply chain risk as:
 
-- **Forecast Accuracy: 80.2%**
-- **Net Error: -751.7K**
-- **Absolute Error: 9780.7K**
+- **OOS** — Out of Stock
+- **EI** — Excess Inventory
 
-The report also classifies inventory risk using:
+This helps highlight where forecasting errors may be affecting product availability or creating excess stock.
 
-- **OOS – Out of Stock**
-- **EI – Excess Inventory**
+![Supply Chain View](supply-chain-view.png)
 
-The customer and product tables make it possible to identify which areas are most affected by forecasting errors.
+---
 
-For example, the report highlights products and customers with:
+## 5. Executive View
 
-- Low forecast accuracy
-- High positive error
-- High negative error
-- Out-of-stock risk
-- Excess inventory risk
+The Executive View brings together the main KPIs from across the business.
 
-This helps show where supply chain planning may need closer attention.
+### Key KPIs
 
-## Executive View
+- **Net Sales:** $823.85M
+- **Gross Margin:** 36.5%
+- **Net Profit:** -6.6%
+- **Forecast Accuracy:** 80.2%
 
-The Executive View brings together the most important KPIs from across the business.
+### Analysis Included
 
-The dashboard includes:
-
-- Net Sales
-- Gross Margin %
-- Net Profit %
-- Forecast Accuracy
 - Revenue by Division
 - Revenue by Channel
 - Yearly Performance Trends
@@ -222,53 +204,52 @@ The dashboard includes:
 - Product Performance
 - Sub-Zone Performance
 
-The main KPIs shown are:
-
-- **Net Sales: $823.85M**
-- **Gross Margin: 36.5%**
-- **Net Profit: -6.6%**
-- **Forecast Accuracy: 80.2%**
-
-Revenue is also broken down by channel, including:
+The report also compares performance across revenue channels such as:
 
 - Retailer
 - Direct
 - Distributor
 
-The report shows that the Retailer channel contributed the largest share of revenue.
+The Retailer channel contributed the largest share of revenue.
 
-The Executive View also compares market share against competitors and shows how revenue, gross margin, net profit and market share changed over time.
+![Executive View](executive-view.png)
+
+---
 
 ## Key Findings
 
 The analysis showed that:
 
-- Net sales were strong at more than **$823M**.
-- Gross Margin remained positive at around **36.5%**.
-- Net Profit was negative at around **-6.6%**, showing that strong sales did not translate into overall profitability.
-- Forecast Accuracy was around **80.2%**.
-- Some customers and product segments showed Out-of-Stock risk.
-- Other areas showed Excess Inventory risk.
-- Revenue performance varied significantly across markets, regions and products.
-- Some high-revenue products still recorded negative net profit margins.
-- Retailer was the strongest revenue channel.
-- Performance differed across divisions, regions and customer groups.
+- Net Sales were above **$823M**
+- Gross Margin remained positive at around **36.5%**
+- Net Profit was negative at around **-6.6%**
+- Forecast Accuracy was around **80.2%**
+- Some customers and products showed **Out-of-Stock risk**
+- Other areas showed **Excess Inventory risk**
+- Revenue performance varied across markets, products and regions
+- Some high-revenue products still recorded negative net profit margins
+- Retailer was the strongest revenue channel
+- Strong sales performance did not always translate into strong profitability
+
+---
 
 ## Why This Analysis Matters
 
 Looking at sales alone does not give a complete picture of business performance.
 
-This report brings together financial, sales, marketing and supply chain information so that users can see how one area affects another.
+This project brings together finance, sales, marketing and supply chain data so users can understand how different parts of the business affect each other.
 
 For example:
 
-- Strong sales may still result in weak profitability.
-- Poor forecast accuracy may lead to excess inventory or stock-outs.
-- A high-performing customer may not always have the strongest margin.
-- A product with strong revenue may still have a negative net profit.
-- Market share can change even when sales are growing.
+- Strong sales may still lead to weak profitability
+- Poor forecast accuracy may cause stock-outs or excess inventory
+- High-performing customers may not always have the strongest margins
+- A product can generate strong revenue while still recording a negative net profit
+- Market share can change even when sales are growing
 
-Bringing these views together makes it easier to identify where the business is performing well and where further attention may be required.
+Bringing these views together makes it easier to identify where the business is performing well and where closer attention is needed.
+
+---
 
 ## Tools Used
 
@@ -283,41 +264,20 @@ Bringing these views together makes it easier to identify where the business is 
 - **Data Transformation**
 - **Data Visualisation**
 - **Business Intelligence**
-- **Exploratory Data Analysis**
 
-## Dashboard Preview
-
-### Finance View
-
-![Finance View](finance-view.png)
-
-### Sales View
-
-![Sales View](sales-view.png)
-
-### Marketing View
-
-![Marketing View](marketing-view.png)
-
-### Supply Chain View
-
-![Supply Chain View](supply-chain-view.png)
-
-### Executive View
-
-![Executive View](executive-view.png)
+---
 
 ## Live Dashboard
 
 [**View the interactive Business Insight 360 Power BI dashboard**](https://app.powerbi.com/view?r=eyJrIjoiZGRhNjYwYTUtZWE3Zi00MzkyLWJhMmItZDE0NzY3NjFkYjJiIiwidCI6ImYyMDIxN2JmLWEwYzYtNDZlNi1hMTdmLTY3YzkwNTY0NDgwZiJ9)
 
+---
+
 ## Key Takeaway
 
-Business Insight 360 shows how different parts of a business can be analysed together rather than in isolation.
+Business Insight 360 shows how different areas of a business can be analysed together rather than in isolation.
 
-The project combines finance, sales, marketing and supply chain data in one report, making it easier to understand how revenue, margin, profitability, forecasting and inventory risk are connected.
-
-The main takeaway from the analysis is that strong sales do not automatically mean strong overall performance. Looking at profitability, forecast accuracy, market share and inventory risk alongside sales gives a much clearer view of the business.
+The project demonstrates that strong sales do not automatically mean strong business performance. Looking at profitability, forecast accuracy, market share and inventory risk alongside revenue gives a much clearer view of how the business is actually performing.
 
 ---
 
